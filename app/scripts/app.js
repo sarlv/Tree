@@ -15,17 +15,17 @@ requirejs.config({
 });
 
 
-requirejs(['factories/treeFactory', 'controllers/treeCtr', 'directives/treeDirect'], function(treeFactory, treeCtr, treeDirect) {
+requirejs(['factories/TreeFactory', 'controllers/TreeCtr', 'directives/TreeDirect'], function(TreeFactory, treeCtr, TreeDirect) {
 
     var tree = angular.module('tree', []);
 
-    tree.factory('TreeFactory', treeFactory);
+    tree.factory('TreeFactory', TreeFactory);
 
-    tree.directive('addItem', treeDirect.addItem);
+    tree.directive('addItem', TreeDirect.addItem);
 
-    tree.directive('removeItem', treeDirect.removeItem);
+    tree.directive('removeItem', TreeDirect.removeItem);
 
-    tree.directive('saveText', treeDirect.saveText);
+    tree.directive('saveText', TreeDirect.saveText);
 
     tree.controller('TreeController', treeCtr);
 
