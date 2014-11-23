@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="tree">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tree test</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+</head>
+
+<body ng-controller="TreeController">
+
+    <script type="text/ng-template" id="tree">
+        <ul>
+            <li ng-repeat="(key, item) in items">
+                <button type="button" class="btn btn-success" add-item>+</button>
+                <button type="button" class="btn btn-danger" remove-item>-</button>
+                <input type="text" class="form-control" value="{{ item.text }}" save-text>
+                
+                <div ng-include=" 'tree'" onload="items = item.children">
+                </div>
+
+            </li>
+        </ul>
+    </script>
+
+    <div ng-include=" 'tree' " onload="items = sourceItems">
+    </div>
+
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+</body>
+
+</html>
