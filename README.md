@@ -11,7 +11,7 @@ After downloading project in root directory do:
 <ol>
 <li><b>bower install</b></li>
 <li><b>npm install</b></li>
-<li><b>grunt grunt serve</b></li>
+<li><b>grunt serve</b></li>
 </ol>
 
 <p>Last command will open project in you browser</p>
