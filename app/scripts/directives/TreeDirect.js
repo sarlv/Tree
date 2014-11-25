@@ -34,7 +34,7 @@ define(['angular'], function(angular) {
 		saveText: function() {
 		    return function(scope, elem, attr) {
 
-		        elem.on('blur', function(e) {
+		        elem.on('blur mouseleave', function(e) {
 		            scope.item.text = elem.val();
 		            
 		            scope.update();

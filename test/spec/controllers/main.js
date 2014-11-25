@@ -1,22 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: TreeCtrl', function() {
 
-  // load the controller's module
-  beforeEach(module('sarkisovLvApp'));
+    // load the controller's module
+    beforeEach(module('tree'));
 
-  var MainCtrl,
-    scope;
+    var ctr;
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+    beforeEach(inject(function($controller, $rootScope) {
+        ctr = $controller
+    }));
+
+    it('should attach a list of awesomeThings to the scope', function() {
+        expect(ctr).toBe(true);
     });
-  }));
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
-  });
 });
